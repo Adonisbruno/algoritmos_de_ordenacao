@@ -4,6 +4,7 @@ from insertion_sort import insertion_sort
 from merge_sort import topDownMergeSort
 from quick_sort import quickSort
 from heapsort import heapsort
+from counting_sort import counting_sort
 import sys
 
 def saida(A):
@@ -13,8 +14,8 @@ def saida(A):
 def main():
     global vetor, opt
     if len(sys.argv) < 3:
-        print "python main.py entrada.txt <SS|IS|HS|MS|QS>"
-        print "Exemplo: python main.py entrada.txt IS"
+        print "python main.py entrada.txt SS|IS|HS|MS|QS|CS > saida.txt"
+        print "Exemplo: python main.py entrada.txt IS > saida.txt"
         sys.exit(-1)
     try:
         vetor = ler_entrada(sys.argv[1])
@@ -43,6 +44,8 @@ if __name__ == "__main__":
     if opt == 'QS':
         quickSort(A)
         saida(A)
+    if opt == 'CS':
+        saida(counting_sort(A))
 
 
 
