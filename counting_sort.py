@@ -1,9 +1,8 @@
 def counting_sort(v):
-    size = len(v)
     maior = max(v)
-
+    maior = maior + 1
     # frequencia
-    count = [0] * (maior+1)
+    count = [0] * maior
     for i in v:
         count[i] += 1
 

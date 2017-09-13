@@ -1,5 +1,6 @@
 def quickSort(vet):
    quickSortHelper(vet,0,len(vet)-1)
+   return vet
 
 def quickSortHelper(vet, first, last):
    if first < last:

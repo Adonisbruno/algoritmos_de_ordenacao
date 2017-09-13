@@ -1,7 +1,8 @@
-def topDownMergeSort(vetA, n):
-    #n = len(vetA)
+def topDownMergeSort(vetA):
+    n = len(vetA)
     vetB = [0]*n
     topDownSplitMerge(vetA, 0, n, vetB)
+    return vetA
 
 def copyArray(vetB, first, last, vetA):
     for i in range(first, last, 1):
